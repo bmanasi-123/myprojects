@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Suggested Brand Name</title>
+</head>
+<body>
+    <h1>Select Two Categories to Generate a Suggested Brand Name</h1>
+    <form action="/suggested" method="POST">
+        <label for="category1">Select First Category:</label>
+        <select name="category1" id="category1">
+            <option value="city">City</option>
+            <option value="pet">Pet</option>
+            <option value="partner">Partner</option>
+            <option value="sports">Sports</option>
+            <option value="series">Series</option>
+        </select><br><br>
+
+        <label for="category2">Select Second Category:</label>
+        <select name="category2" id="category2">
+            <option value="city">City</option>
+            <option value="pet">Pet</option>
+            <option value="partner">Partner</option>
+            <option value="sports">Sports</option>
+            <option value="series">Series</option>
+        </select><br><br>
+
+        <button type="submit">Generate Suggested Brand Name</button>
+    </form>
+
+    {% if error %}
+        <p style="color:red;">{{ error }}</p>
+    {% endif %}
+</body>
+</html>
